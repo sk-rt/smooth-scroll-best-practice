@@ -5,7 +5,7 @@ name: Build page
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
