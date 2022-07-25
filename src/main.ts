@@ -1,3 +1,4 @@
+import './base.css';
 import './style.css';
 
 const anchorLinks = document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]');
@@ -19,9 +20,7 @@ anchorLinks.forEach((anchorLink) => {
     // 一定時間後にscroll-behavior: smooth;を削除する。
     // NOTE: requestAnimationFrameだとfirefoxで動作しない。setTimeoutだと小さくても動作する(?)
     setTimeout(() => {
-      console.log('requestAnimationFrame');
       document.documentElement.style.scrollBehavior = 'auto';
     }, 1);
   });
 });
-
